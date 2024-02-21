@@ -138,6 +138,15 @@ html, body{
   height: 200px;
   background-color: #977e6b;
   border-radius: 10px;
+  background-image: url('../src/assets/debitcard.png');
+  background-size:cover;
+  color: white;
+  font-style: bold;
+  transition: transform 150ms ease-out 100ms
+}
+
+.cdcardcontainer:hover{
+  transform: scale(1.2);
 }
 
 .cardnumber{
@@ -191,6 +200,9 @@ html, body{
   border-radius: 10px;
   font-family: 'Courier New', Courier, monospace;
   font-size: large;
+  background-image: url('../src/assets/debitcard.png');
+  color: white;
+  font-style: bold;
 }
 
 .Form{
