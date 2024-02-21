@@ -95,6 +95,7 @@ html, body{
   gap:20px;
   border-radius: 10px;
   color: white;
+  transition: transform 150ms ease-out 100ms
 
 }
 
@@ -193,7 +194,7 @@ html, body{
 }
 
 .Form{
-  width: 500px;
+  width: 450px;
   background-color: #977e6b;
 
 }
@@ -204,4 +205,12 @@ html, body{
   align-items: center;
   justify-content: center;
   gap: 5px;
+  padding: 10px;
+}
+
+.welcome{
+  font-size: xx-large;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  margin-top: 20px;
 }

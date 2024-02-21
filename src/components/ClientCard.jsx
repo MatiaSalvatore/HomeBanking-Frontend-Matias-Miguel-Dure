@@ -5,7 +5,7 @@ const ClientCard = () => {
     const [accounts, setAccounts] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/clients/2")
+        axios.get("http://localhost:8080/api/clients/1")
             .then(response => {
                 const clientData = response.data;
                 setAccounts(clientData.accounts);

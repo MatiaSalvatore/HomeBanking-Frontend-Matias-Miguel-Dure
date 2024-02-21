@@ -24,13 +24,18 @@ const ReqCard = () => {
           <h3>Add a new card</h3>
           <form action="" method="post" className="Form">
             <fieldset className="Formfield">
-              <label>Dato: <input type="text" id="1" /></label>
-              <label>Dato: <input type="text" id="2" /></label>
-              <label>Dato: <input type="text" id="3" /></label>
-              <label>Dato: <input type="text" id="4" /></label>
-              <label>Dato: <input type="text" id="5" /></label>
-              <label>Dato: <input type="text" id="6" /></label>
-              <label>Dato: <input type="text" id="7" /></label>
+            <p>Select card type</p>
+            <select className="selectCard" name="ejemplo" id="ejemplo">
+              <option value="credit">Credit</option>
+              <option value="debit">Debit</option>
+            </select>
+            <p>Select card membership (color)</p>
+            <select className="selectCard" name="ej" id="ej">
+              <option value="titanium">Titanium</option>
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+            </select>
+            <Anchor href="/cards" content="Submit"></Anchor>
             </fieldset>
           </form>
       </div>

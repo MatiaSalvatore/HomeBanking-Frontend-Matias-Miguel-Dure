@@ -3,6 +3,7 @@ import Anchor from "../components/Anchor";
 
 const ReqAccount = () => {
 
+
      /* 
         post
           axios.post("http://localhost:8080/api/account")
@@ -23,13 +24,8 @@ const ReqAccount = () => {
                 <h3>Add a new account</h3>
                 <form action="" method="post" className="Form">
                   <fieldset className="Formfield">
-                    <label>Dato: <input type="text" id="1" /></label>
-                    <label>Dato: <input type="text" id="2" /></label>
-                    <label>Dato: <input type="text" id="3" /></label>
-                    <label>Dato: <input type="text" id="4" /></label>
-                    <label>Dato: <input type="text" id="5" /></label>
-                    <label>Dato: <input type="text" id="6" /></label>
-                    <label>Dato: <input type="text" id="7" /></label>
+                    <p>By creating an account with Lion Bank, you confirm your eligibility, agree to provide accurate information, and undertake to maintain the security of your account credentials. You commit to complying with all applicable laws and regulations, refrain from engaging in illegal activities, and consent to receive communications from Lion Bank. Lion Bank reserves the right to terminate or suspend accounts for any violation of these terms, and may update them at its discretion. These terms are governed by the laws of [Jurisdiction], and any invalid provision shall not affect the validity of the remaining terms.</p>
+                    <Anchor href="/accounts" content="Submit"></Anchor>
                   </fieldset>
                 </form>
             </div>

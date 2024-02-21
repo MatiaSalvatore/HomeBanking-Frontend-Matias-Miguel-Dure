@@ -10,13 +10,14 @@ import Loans from './pages/Loans';
 import ReqAccount from './pages/ReqAccount';
 import ReqCard from './pages/ReqCard';
 import ReqLoan from './pages/ReqLoan';
-
+import WelcomeBanner from './components/ClientBanner';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
       <MainLayout>
+        <WelcomeBanner></WelcomeBanner>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/accounts' element={<Home/>} />
