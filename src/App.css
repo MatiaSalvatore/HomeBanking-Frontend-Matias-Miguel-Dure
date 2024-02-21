@@ -1,42 +1,207 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  background: rgb(240,213,178);
+}
+
+.footer{
+  background: rgb(198,148,82);
+  background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.socialmediacontainer{
+  display: flex;
+  flex-direction: row;
+  gap:5px
+
+}
+
+.socialmediacontainer img{
+  background-color: white;
+  border-radius: 50%;
+  width: 35px;
+  gap:20px;
+}
+
+.socialmediacontainer img:hover{
+  transform: scale(1.2);
+}
+
+.header{
+  background: rgb(198,148,82);
+  background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
+  height: 65px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header nav{
+  display: flex;
+  gap:10px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  width: 150px;
+  margin-top: 22px;
+  place-self: center;
+
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.anchor{
+  border-radius: 3px;
+  padding: 5px;
+  width:100px;
+  text-align: center;
+  background-color: #140901;
+  color:white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.anchor:hover{
+  background-color: #977e6b;
+  color:#140901;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.clientcardcontainer{
+  margin-top: 50px;
+  display: flex;
+  flex: row;
+  gap:50px;
+  place-content: center;
+  
 }
 
-.card {
-  padding: 2em;
+.clientcard{
+  background: rgb(198,148,82);
+  background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
+  padding: 50px;
+  width:400px;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  border-radius: 10px;
+  color: white;
+
 }
 
-.read-the-docs {
-  color: #888;
+.clientcard:hover{
+  transform: scale(1.2);
+
+}
+
+.acctitle{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight:bold;
+  font-size: larger;
+}
+
+.accbalance{
+  font-size: xx-large;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  margin-right: 70px;
+  font-style: oblique;
+}
+
+.componentcontainer{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap:50px;
+}
+
+.cdcardscontainer{
+  margin-top: 50px;
+  display: flex;
+  flex: row;
+  gap:50px;
+  place-content: center;
+}
+.cdcardcontainer{
+  width: 350px;
+  height: 200px;
+  background-color: #977e6b;
+  border-radius: 10px;
+}
+
+.cardnumber{
+  margin-left: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-large;
+}
+
+.cardtop{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cardtitle{
+  margin-left: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size:large;
+}
+
+
+.datasection{
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap:7px;
+}
+
+.loancardscontainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.loancardcontainer{
+  display: flex;
+  flex-direction: row;
+  background-color: #977e6b;
+  width: 700px;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+}
+
+.Form{
+  width: 500px;
+  background-color: #977e6b;
+
+}
+
+.Formfield{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
