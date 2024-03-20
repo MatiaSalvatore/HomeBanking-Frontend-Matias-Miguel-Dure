@@ -15,9 +15,9 @@ const SignIn = ()=>{
 
     const handleSignIn = async(e)=>{
         e.preventDefault()
+
         axios.post("/api/auth/login",userData)
         .then((res)=>{
-            console.log(res.data)
             dispatch(login(res.data))
             navigate('/')
         })

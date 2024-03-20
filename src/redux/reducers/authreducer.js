@@ -17,7 +17,6 @@ const authReducer = createReducer(initialState, (builder)=>{
         .addCase(login,(state,action)=>{
             return{
                 ...state,
-                token: action.payload.token,
                 timestamps: action.payload.timestamps
             }
         })
