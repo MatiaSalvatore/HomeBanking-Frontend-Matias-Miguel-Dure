@@ -11,16 +11,20 @@ import ReqAccount from './pages/ReqAccount';
 import ReqCard from './pages/ReqCard';
 import ReqLoan from './pages/ReqLoan';
 import WelcomeBanner from './components/ClientBanner';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
       <MainLayout>
         <WelcomeBanner></WelcomeBanner>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/accounts' element={<Home/>} />
+          <Route path='/signin' element={<SignIn/>}/>
+          <Route path='/signup' element={<SignUp/>}/>
+          <Route path='/accounts' element={<Home/>}/>
           <Route path='/cards' element={<Cards/>} />
           <Route path='/loans' element={<Loans/>} />
           <Route path='/addloan' element={<ReqLoan/>} />
@@ -28,7 +32,6 @@ function App() {
           <Route path='/addcard' element={<ReqCard/>} />
         </Routes>
       </MainLayout>
-    </BrowserRouter>
   );
 }
 
