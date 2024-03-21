@@ -5,6 +5,7 @@ import authActions from '../redux/actions/authactions'
 import ClientCard from "../components/ClientCard";
 import ClientDBCards from "../components/ClientDBCards";
 import AccountDetail from "../components/AccountDetail";
+import Transaction from "../components/Transaction";
 
 
 const Home = ()=>{
@@ -33,6 +34,7 @@ const Home = ()=>{
     <div>
         <ClientCard></ClientCard>
         <ClientDBCards></ClientDBCards>
+        <Transaction></Transaction>
         
     </div>
     

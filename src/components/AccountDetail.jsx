@@ -23,7 +23,6 @@ const AccountDetail = (id) => {
     }, []);
 
 
-
     return (
         <div className="clientcardcontainer">
             <div className="clientcard">

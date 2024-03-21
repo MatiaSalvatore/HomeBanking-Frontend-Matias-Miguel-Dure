@@ -32,7 +32,7 @@ const ClientCard = () => {
                     <p className="acctitle">Account Number:    <span>{account.number}</span></p>
                     <p className="acctitle">Balance:</p>
                     <span className="accbalance">{numberFormatter.format(account.balance)}</span>
-                    <p className="acctitle">Creation Date: <span>{account.creationDate}</span></p>                    
+                    <p className="acctitle">Creation Date: <span>{account.creationDate}</span></p>                 
                 </div>
             ))}
         </div>

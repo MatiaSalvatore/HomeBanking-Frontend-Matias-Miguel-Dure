@@ -46,10 +46,9 @@ function App() {
         console.log("info gotted")
           dispatch(current(res.data))
       })
-
       }
-          
   },[])
+  
   
   return (
       <MainLayout>
