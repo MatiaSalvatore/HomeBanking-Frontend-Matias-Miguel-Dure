@@ -33,18 +33,17 @@ function App() {
 
   const user = useSelector((store)=>store.auth.user)
   const dispatch = useDispatch();
-  console.log(user);
   const {current, login}= authActions
 
   useEffect(()=>{
       const token = localStorage.getItem('token');
-      if (token != null){
+      if (token){
         axios.get("/api/clients/current",{
           headers:{
               Authorization: `Bearer ${token}`
           }
       }).then((res)=>{ 
-          console.log(res.data);
+        console.log("info gotted")
           dispatch(current(res.data))
       })
 

@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import {useDispatch, useSelector } from "react-redux";
 import authActions from '../redux/actions/authactions'
+import ClientCard from "../components/ClientCard";
+import ClientDBCards from "../components/ClientDBCards";
+import AccountDetail from "../components/AccountDetail";
 
 
 const Home = ()=>{
@@ -28,8 +31,12 @@ const Home = ()=>{
     const username = user.name || 'Guest'
     return (
     <div>
-        Welcome to Dashboard, {username}!
-    </div>)
+        <ClientCard></ClientCard>
+        <ClientDBCards></ClientDBCards>
+        
+    </div>
+    
+    )
 }
 
 

@@ -7,7 +7,12 @@ const ClientDBCards = () => {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
-        axios.get("/api/clients/current")
+        const token = localStorage.getItem('token'); 
+        axios.get("/api/clients/current",{
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
             .then(response => {
                 const clientData = response.data;
                 setCards(clientData.cards);
