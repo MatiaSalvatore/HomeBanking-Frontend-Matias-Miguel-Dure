@@ -44,9 +44,9 @@ const Transaction = ()=>{
                 <input onChange={handleInput} type="text" name="destAccount" id="destAccount" />
                 <label htmlFor="detail">Transaction detail:</label>
                 <input onChange={handleInput} type="text" name="detail" id="detail" />
-                <label htmlFor="amount">Password:</label>
+                <label htmlFor="amount">Amount:</label>
                 <input onChange={handleInput} type="number" name="amount" id="amount" />
-                <button type="submit">Sign Up</button>
+                <button type="submit">Transfer</button>
             </form>
         </div>
     )
