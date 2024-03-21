@@ -76,6 +76,8 @@ html, body{
   color:#140901;
 }
 
+
+
 .clientcardcontainer{
   margin-top: 50px;
   display: flex;
@@ -114,7 +116,7 @@ html, body{
   font-size: xx-large;
   text-align: right;
   font-family: 'Courier New', Courier, monospace;
-  margin-right: 70px;
+  margin-right: 0px;
   font-style: oblique;
 }
 

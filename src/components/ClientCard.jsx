@@ -4,6 +4,11 @@ import axios from "axios";
 const ClientCard = () => {
     const [accounts, setAccounts] = useState([]);
 
+    const numberFormatter = new Intl.NumberFormat('en-US',{
+        style: 'currency',
+        currency: 'USD',
+    })
+
     useEffect(() => {
         const token = localStorage.getItem('token');
         axios.get("/api/clients/current",{
@@ -26,7 +31,7 @@ const ClientCard = () => {
                 <div key={account.id} className="clientcard">
                     <p className="acctitle">Account Number:    <span>{account.number}</span></p>
                     <p className="acctitle">Balance:</p>
-                    <span className="accbalance">${account.balance}</span>
+                    <span className="accbalance">{numberFormatter.format(account.balance)}</span>
                     <p className="acctitle">Creation Date: <span>{account.creationDate}</span></p>                    
                 </div>
             ))}
