@@ -13,23 +13,58 @@ import ReqLoan from './pages/ReqLoan';
 import WelcomeBanner from './components/ClientBanner';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import { withAuth } from './hocs/withAuth';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import axios from 'axios';
+import authActions from '../src/redux/actions/authactions'
 
 function App() {
+
+  //Autorizaciones
+  const HomedWithAuth = withAuth(Home);
+  const CardsWithAuth = withAuth(Cards);
+  const LoansWithAuth = withAuth(Loans);
+  const ReqLoanWithAuth = withAuth(ReqLoan);
+  const ReqCardWithAuth = withAuth(ReqCard);
+  const ReqAccountWithAuth = withAuth(ReqAccount);
+
   const [count, setCount] = useState(0)
 
+  const user = useSelector((store)=>store.auth.user)
+  const dispatch = useDispatch();
+  console.log(user);
+  const {current, login}= authActions
+
+  useEffect(()=>{
+      const token = localStorage.getItem('token');
+      if (token != null){
+        axios.get("/api/clients/current",{
+          headers:{
+              Authorization: `Bearer ${token}`
+          }
+      }).then((res)=>{ 
+          console.log(res.data);
+          dispatch(current(res.data))
+      })
+
+      }
+          
+  },[])
+  
   return (
       <MainLayout>
         <WelcomeBanner></WelcomeBanner>
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<HomedWithAuth/>} />
           <Route path='/signin' element={<SignIn/>}/>
           <Route path='/signup' element={<SignUp/>}/>
-          <Route path='/accounts' element={<Home/>}/>
-          <Route path='/cards' element={<Cards/>} />
-          <Route path='/loans' element={<Loans/>} />
-          <Route path='/addloan' element={<ReqLoan/>} />
-          <Route path='/addacc' element={<ReqAccount/>} />
-          <Route path='/addcard' element={<ReqCard/>} />
+          <Route path='/accounts' element={<HomedWithAuth/>}/>
+          <Route path='/cards' element={<CardsWithAuth/>} />
+          <Route path='/loans' element={<LoansWithAuth/>} />
+          <Route path='/addloan' element={<ReqLoanWithAuth/>} />
+          <Route path='/addacc' element={<ReqAccountWithAuth/>} />
+          <Route path='/addcard' element={<ReqCardWithAuth/>} />
         </Routes>
       </MainLayout>
   );

@@ -5,12 +5,11 @@ import { useDispatch } from "react-redux";
 import authActions from '../redux/actions/authactions'
 
 
-
 const SignIn = ()=>{
 
     const [userData,setUserData] = useState({email:'',password:''})
     const dispatch = useDispatch()
-    const {login} = authActions;
+    const {login, current} = authActions;
     const navigate = useNavigate()
 
     const handleSignIn = async(e)=>{
@@ -19,7 +18,23 @@ const SignIn = ()=>{
         axios.post("/api/auth/login",userData)
         .then((res)=>{
             dispatch(login(res.data))
-            navigate('/')
+            if (res.data){
+                const token = localStorage.getItem('token');
+                axios.get("/api/clients/current",{
+                    headers:{
+                        Authorization: `Bearer ${token}`
+                    }
+                }).then((res)=>{ 
+                    console.log(res.data);
+                    console.log(res.data.accounts)
+                    dispatch(current(res.data))
+                    navigate('/')
+                })
+            }
+        
+        
+        
+        
         })
         .catch((err)=>{
             console.log(err);

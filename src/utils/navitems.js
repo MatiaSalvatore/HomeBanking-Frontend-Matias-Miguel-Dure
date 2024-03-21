@@ -2,14 +2,16 @@ export const navitems = [
 
     {
         href:"/accounts",
-        name:"Accounts"
+        name:"Accounts",
     },
     {
         href:"/cards",
-        name:"Cards"
+        name:"Cards",
     },
     {
         href:"/loans",
-        name:"Loans"
+        name:"Loans",
+
     }
+
 ]

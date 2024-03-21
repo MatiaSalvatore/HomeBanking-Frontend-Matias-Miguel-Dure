@@ -6,12 +6,12 @@ import authActions from '../redux/actions/authactions'
 
 const Home = ()=>{
     const user = useSelector((store)=>store.auth.user)
-    const dispatch = useDispatch();
-    console.log(user);
-    const {current, login}= authActions
+    //const dispatch = useDispatch();
+    //console.log(user);
+    //const {current, login}= authActions
 
 
-    useEffect(()=>{
+    /*useEffect(()=>{
         const token = localStorage.getItem('token');
 
         if (!user.loggedIn && !!token){
@@ -19,12 +19,12 @@ const Home = ()=>{
                 headers:{
                     Authorization: `Bearer ${token}`
                 }
-            }).then((res)=>{
+            }).then((res)=>{ 
                 console.log(res.data);
                 dispatch(current(res.data))
             })
         }
-    },[])
+    },[]) */
     const username = user.name || 'Guest'
     return (
     <div>

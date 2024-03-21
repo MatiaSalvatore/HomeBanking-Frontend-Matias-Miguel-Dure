@@ -7,7 +7,7 @@ const ClientDBCards = () => {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/clients/1")
+        axios.get("/api/clients/current")
             .then(response => {
                 const clientData = response.data;
                 setCards(clientData.cards);
