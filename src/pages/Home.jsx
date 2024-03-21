@@ -35,6 +35,7 @@ const Home = ()=>{
         <ClientCard></ClientCard>
         <ClientDBCards></ClientDBCards>
         <Transaction></Transaction>
+        <AccountDetail></AccountDetail>
         
     </div>
     
