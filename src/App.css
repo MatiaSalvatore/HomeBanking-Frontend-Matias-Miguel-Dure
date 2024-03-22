@@ -8,13 +8,16 @@ html, body{
   background: rgb(240,213,178);
 }
 
+.Maincointainer{
+  display: flex;
+  flex-direction: row;
+}
+
 .footer{
   background: rgb(198,148,82);
   background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
-  width: 100vw;
-  height: 50px;
-  position: absolute;
-  bottom: 0;
+  width: 50px;
+  height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -42,20 +45,26 @@ html, body{
 .header{
   background: rgb(198,148,82);
   background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
-  height: 65px;
+  height: 100vh;
+  width: 200px;
+  gap:50px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-right:100px;
 }
 
 .header nav{
   display: flex;
+  flex-direction: column;
   gap:10px;
+
 }
 
 .logo {
-  width: 150px;
-  margin-top: 22px;
+  width: 400px;
+
   place-self: center;
 
 }

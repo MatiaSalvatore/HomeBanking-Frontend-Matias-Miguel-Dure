@@ -3,6 +3,10 @@ import {navitems} from "../utils/navitems";
 import Anchor from "./Anchor";
 import logo from "../assets/bank_logo.png"
 import LogoutButton from "./LogoutButton";
+import insta from "../assets/insta.png";
+import linked from "../assets/linkedin.png";
+import face from "../assets/face.png";
+import whatspp from "../assets/whatsapp.png";
 
 const Header = () => {
     return (
@@ -17,6 +21,13 @@ const Header = () => {
                 }
                 <LogoutButton></LogoutButton>
             </nav>
+            <p>&#169; 2024 - Matías Miguel Dure All rights reserved</p>
+            <div className="socialmediacontainer">
+                <img src={insta}></img>
+                <img src={linked}></img>
+                <img src={whatspp}></img>
+                <img src={face}></img>
+            </div>
         </header>
     )
 }

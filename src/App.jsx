@@ -52,7 +52,6 @@ function App() {
   
   return (
       <MainLayout>
-        <WelcomeBanner></WelcomeBanner>
         <Routes>
           <Route path='/' element={<HomedWithAuth/>} />
           <Route path='/signin' element={<SignIn/>}/>
