@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import chip from "../assets/cardchip.png";
+import { CustomScroll } from "react-custom-scroll";
 
 const ClientDBCards = () => {
 
@@ -25,7 +26,8 @@ const ClientDBCards = () => {
     return (
         <>
             <div className="cdcardscontainer">
-            {cards.map(card => (
+                <CustomScroll heightRelativeToParent="100%" scrollTo="1">
+                {cards.map(card => (
                 <div key={card.id} className="cdcardcontainer">
                     <div className="cardtop">
                         <img className="chip" src={chip} alt="chip"/>
@@ -42,7 +44,8 @@ const ClientDBCards = () => {
                         
                     </div>
                 </div>
-            ))}
+            ))}  
+                </CustomScroll>
         </div>
         </>
     )

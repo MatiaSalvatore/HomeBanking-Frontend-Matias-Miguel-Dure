@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { CustomScroll } from "react-custom-scroll";
 
 const ClientCard = () => {
     const [accounts, setAccounts] = useState([]);
@@ -27,6 +28,7 @@ const ClientCard = () => {
 
     return (
         <div className="clientcardcontainer">
+            <CustomScroll heightRelativeToParent="100%">
             {accounts.map(account => (
                 <div key={account.id} className="clientcard">
                     <p className="acctitle">Account Number:    <span>{account.number}</span></p>
@@ -35,6 +37,8 @@ const ClientCard = () => {
                     <p className="acctitle">Creation Date: <span>{account.creationDate}</span></p>                 
                 </div>
             ))}
+            </CustomScroll>
+
         </div>
     );
 };

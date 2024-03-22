@@ -87,33 +87,7 @@ html, body{
 
 
 
-.clientcardcontainer{
-  margin-top: 50px;
-  display: flex;
-  flex: row;
-  gap:50px;
-  place-content: center;
-  
-}
 
-.clientcard{
-  background: rgb(198,148,82);
-  background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
-  padding: 50px;
-  width:400px;
-  display: flex;
-  flex-direction: column;
-  gap:20px;
-  border-radius: 10px;
-  color: white;
-  transition: transform 150ms ease-out 100ms
-
-}
-
-.clientcard:hover{
-  transform: scale(1.2);
-
-}
 
 .acctitle{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -137,12 +111,48 @@ html, body{
   gap:50px;
 }
 
-.cdcardscontainer{
-  margin-top: 50px;
+.clientcardcontainer{
+  margin-top: 10px;
+  height: 220px;
+  width: 400px;
   display: flex;
   flex: row;
   gap:50px;
   place-content: center;
+  
+}
+
+.clientcard{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: rgb(198,148,82);
+  background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
+  padding: 50px;
+  width:350px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  gap:20px;
+  border-radius: 10px;
+  color: white;
+  transition: transform 150ms ease-out 100ms
+
+}
+/*
+.clientcard:hover{
+  transform: scale(1.2);
+
+}*/
+
+
+.cdcardscontainer{
+  height:220px;
+  width: 400px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 .cdcardcontainer{
   width: 350px;
@@ -156,9 +166,10 @@ html, body{
   transition: transform 150ms ease-out 100ms
 }
 
+/*
 .cdcardcontainer:hover{
   transform: scale(1.2);
-}
+}*/
 
 .cardnumber{
   margin-left: 10px;
