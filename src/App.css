@@ -281,8 +281,24 @@ html, body{
 .actionbutton img{
   width: 50px;
   place-self: center;
-  fill: white;
 }
+
+
+.actionbutton:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% { transform: translate(0px, 2px); }
+  50% { transform: translate(0px, -2px); }
+  100% { transform: translate(0px, 0px); }
+
+}
+
 
 .actioncontainer{
  width: 500px;
@@ -335,11 +351,41 @@ html, body{
   text-align: center;
 }
 
+.DEBIT{
+  background-color: rgb(152, 183, 240,70%);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.CREDIT .SILVER{
+  background-color: rgb(170, 170, 170,70%);
+  height: 200px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+}
 
 
+.CREDIT .GOLD{
+  background-color: rgb(250, 189, 23,70%);
+  height: 200px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+}
 
-
-
+.CREDIT .TITANIUM{
+  background-color: rgb(253, 143, 143,80%);
+  height: 200px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+}
 
 
 

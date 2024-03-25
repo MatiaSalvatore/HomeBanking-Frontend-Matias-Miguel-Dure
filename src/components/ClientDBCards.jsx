@@ -29,20 +29,23 @@ const ClientDBCards = () => {
                 <CustomScroll heightRelativeToParent="100%" scrollTo="1">
                 {cards.map(card => (
                 <div key={card.id} className="cdcardcontainer">
-                    <div className="cardtop">
-                        <img className="chip" src={chip} alt="chip"/>
-                        <div className="type">
-                            <p>{card.type} CARD</p>
-                        </div>
+                    <div className={card.type}>
+                        <div className={card.color}>
+                        <div className="cardtop">
+                                <img className="chip" src={chip} alt="chip"/>
+                                <div className="type">
+                                    <p>{card.type} CARD</p>
+                                </div>
+                            </div>
+                            <p className="cardnumber">{card.number}</p>
+                            <p className="cardtitle">{card.cardHolder}</p>
+                            <div className="datasection">
+                                <p>Valid thru:{card.thruDate}</p>               
+                                <p>CVV: {card.cvv}</p>
+                                <p>{card.color}</p>
                     </div>
-                    <p className="cardnumber">{card.number}</p>
-                    <p className="cardtitle">{card.cardHolder}</p>
-                    <div className="datasection">
-                        <p>Valid thru:{card.thruDate}</p>               
-                        <p>CVV: {card.cvv}</p>
-                        <p>{card.color}</p>
-                        
                     </div>
+                </div>
                 </div>
             ))}  
                 </CustomScroll>
