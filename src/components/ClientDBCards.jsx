@@ -26,7 +26,6 @@ const ClientDBCards = () => {
     return (
         <>
             <div className="cdcardscontainer">
-                <CustomScroll heightRelativeToParent="100%" scrollTo="1">
                 {cards.map(card => (
                 <div key={card.id} className="cdcardcontainer">
                     <div className={card.type}>
@@ -48,7 +47,6 @@ const ClientDBCards = () => {
                 </div>
                 </div>
             ))}  
-                </CustomScroll>
         </div>
         </>
     )

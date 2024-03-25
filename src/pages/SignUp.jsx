@@ -31,7 +31,7 @@ const SignUp = ()=>{
     }
 
     return (
-        <div className="componentcontainer">
+        <div className="formcontainer">
             <form onSubmit={handleSignUp}>
                 <label htmlFor="firstname">First Name:</label>
                 <input onChange={handleInput} type="text" name="firstname" id="firstname" />

@@ -40,10 +40,9 @@ const ReqCard = () => {
 
     return (
       <>
-      <div className="componentcontainer">
+      <div className="formcontainer">
           <h3>Add a new card</h3>
-          <form onSubmit={handleNewCard} className="Form">
-            <fieldset className="Formfield">
+          <form onSubmit={handleNewCard} >
             <label htmlFor="cardtype">Select card type</label>
             <select onChange={handleInput} className="selectCard" name="cardtype" id="cardtype">
               <option value="CREDIT">CREDIT</option>
@@ -56,7 +55,6 @@ const ReqCard = () => {
               <option value="SILVER">SILVER</option>
             </select>
             <button className="anchor" href="/" type="submit">Apply new card</button>
-            </fieldset>
           </form>
       </div>
   </>

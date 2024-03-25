@@ -1,7 +1,13 @@
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 html, body{
@@ -109,16 +115,32 @@ html, body{
   flex-direction: column;
   place-items: center;
   gap:50px;
+  align-self: center;
+  place-self: center;
+}
+
+.formcontainer{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap:50px;
+  background-color: rgb(7, 7, 7);
+  padding: 50px;
+  border-radius: 20px;
+  color: white;
+  font-family: 'roboto';
 }
 
 .clientcardcontainer{
   margin-top: 10px;
-  height: 220px;
-  width: 400px;
+  height: 250px;
+  width: 800px;
+  overflow: scroll;
   display: flex;
   flex-direction: row;
   gap:50px;
-  place-content: center;
+
   
 }
 .rcs-inner-handle {
@@ -136,14 +158,14 @@ html, body{
 */
 
 .clientcard{
-  margin-top: 10px;
-  margin-bottom: 10px;
+
   background: rgb(198,148,82);
   background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
   padding: 50px;
   width:350px;
   height: 200px;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   place-content: center;
   gap:20px;
@@ -160,13 +182,17 @@ html, body{
 
 
 .cdcardscontainer{
-  height:220px;
-  width: 400px;
+  height:250px;
+  width: 800px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   place-items: center;
+  overflow: scroll;
+  gap:20px;
 }
+
 .cdcardcontainer{
+  flex-shrink: 0;
   width: 350px;
   height: 200px;
   background-color: #977e6b;
@@ -239,11 +265,6 @@ html, body{
   font-style: bold;
 }
 
-.Form{
-  width: 450px;
-  background-color: #977e6b;
-
-}
 
 .Formfield{
   display: flex;
@@ -310,8 +331,9 @@ html, body{
 .mainlayoutgrid{
   display: flex;
   flex-direction: row;
-  gap: 350px;
-  margin-top: 50px;
+  align-items: center;
+  gap: 150px;
+  margin-top: 20px;
 }
 
 .carousel .slide{
@@ -353,13 +375,13 @@ html, body{
 
 .DEBIT{
   background-color: rgb(152, 183, 240,70%);
-  height: 100%;
+  height:200px;
   width: 100%;
   border-radius: 10px;
   color: black;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
-  
+  margin-top: -10px;
 }
 
 .CREDIT .SILVER{
@@ -368,6 +390,7 @@ html, body{
   border-radius: 10px;
   color: black;
   font-weight: 700;
+  margin-top: -10px;
 }
 
 
@@ -377,6 +400,7 @@ html, body{
   border-radius: 10px;
   color: black;
   font-weight: 700;
+  margin-top: -10px;
 }
 
 .CREDIT .TITANIUM{
@@ -385,6 +409,7 @@ html, body{
   border-radius: 10px;
   color: black;
   font-weight: 700;
+  margin-top: -10px;
 }
 
 
@@ -464,3 +489,34 @@ html, body{
   font-style: italic;
 }
 
+/* FONTS */
+
+input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: rgba(218, 218, 218, 0);
+}
+select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: rgba(218, 218, 218, 0);
+}
+input:autofill{
+  background-color: aqua;
+}
+
+.box{
+  margin-left: 350px;
+}

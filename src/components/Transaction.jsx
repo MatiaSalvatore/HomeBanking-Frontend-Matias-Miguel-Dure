@@ -36,7 +36,7 @@ const Transaction = ()=>{
     }
 
     return (
-        <div className="componentcontainer">
+        <div className="formcontainer">
             <form onSubmit={handleTransaction}>
                 <label htmlFor="ogAccount">Account of origin:</label>
                 <input onChange={handleInput} type="text" name="ogAccount" id="ogAccount" />

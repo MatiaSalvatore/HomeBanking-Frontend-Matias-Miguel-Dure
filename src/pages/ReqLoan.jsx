@@ -77,7 +77,7 @@ const ReqLoan = () => {
     };
 
     return (
-        <div className="componentcontainer">
+        <div className="formcontainer">
             <form onSubmit={handleLoanApply}>
                 <label htmlFor="name">Type of loan:</label>
                 <select onChange={handleLoanTypeChange} value={userData.name} name="name" id="name">
