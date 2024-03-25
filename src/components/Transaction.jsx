@@ -4,10 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import authActions from '../redux/actions/authactions'
 
-
-
 const Transaction = ()=>{
-
     const [userData,setUserData] = useState({ogAccount:'',destAccount:'',detail:'',amount:''})
     const dispatch = useDispatch()
     const {login} = authActions;
@@ -24,9 +21,12 @@ const Transaction = ()=>{
         })
         .then((res)=>{
             console.log(res.data)
+            alert("Transaction successfull!")
+            navigate("/")
         })
         .catch((err)=>{
             console.log(err);
+            alert("Not enough funds!")
         })
     }
 

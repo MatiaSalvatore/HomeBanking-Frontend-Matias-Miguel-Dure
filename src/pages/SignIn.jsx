@@ -12,6 +12,7 @@ const SignIn = ()=>{
     const {login, current} = authActions;
     const navigate = useNavigate()
 
+
     const handleSignIn = async(e)=>{
         e.preventDefault()
 
@@ -31,13 +32,10 @@ const SignIn = ()=>{
                     navigate('/')
                 })
             }
-        
-        
-        
-        
         })
         .catch((err)=>{
             console.log(err);
+            alert('Usuario o contraseña incorrectos');
         })
     }
     const handleInput = (e) =>{

@@ -18,6 +18,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import axios from 'axios';
 import authActions from '../src/redux/actions/authactions'
+import Transaction from './components/Transaction';
+import AccountDetail from './components/AccountDetail';
 
 function App() {
 
@@ -28,7 +30,8 @@ function App() {
   const ReqLoanWithAuth = withAuth(ReqLoan);
   const ReqCardWithAuth = withAuth(ReqCard);
   const ReqAccountWithAuth = withAuth(ReqAccount);
-
+  const ReqTransactionWithAuth = withAuth(Transaction);
+  const AccountDetailWithAuth = withAuth(AccountDetail);
   const [count, setCount] = useState(0)
 
   const user = useSelector((store)=>store.auth.user)
@@ -56,12 +59,14 @@ function App() {
           <Route path='/' element={<HomedWithAuth/>} />
           <Route path='/signin' element={<SignIn/>}/>
           <Route path='/signup' element={<SignUp/>}/>
-          <Route path='/accounts' element={<HomedWithAuth/>}/>
+          <Route path='/accounts' element={<AccountDetailWithAuth/>}/>
           <Route path='/cards' element={<CardsWithAuth/>} />
           <Route path='/loans' element={<LoansWithAuth/>} />
           <Route path='/addloan' element={<ReqLoanWithAuth/>} />
           <Route path='/addacc' element={<ReqAccountWithAuth/>} />
           <Route path='/addcard' element={<ReqCardWithAuth/>} />
+          <Route path='/transaction' element={<ReqTransactionWithAuth/>} />
+
         </Routes>
       </MainLayout>
   );

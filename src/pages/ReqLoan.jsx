@@ -1,44 +1,111 @@
-import React from "react";
-import Anchor from "../components/Anchor";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import authActions from '../redux/actions/authactions'
 
 const ReqLoan = () => {
-    /* 
-       post
-         axios.post("http://localhost:8080/api/account")
-           .then(response => {
-             // La solicitud se completó con éxito, puedes manejar la respuesta aquí
-             console.log('Respuesta del servidor:', response.data);
-           })
-           .catch(error => {
-             // Ocurrió un error al realizar la solicitud, maneja el error aquí
-             console.error('Error al realizar la solicitud:', error);
-           });
- 
- */
+    const [userData, setUserData] = useState({ name: '', amount: '', payments: '', accountNumber: '' });
+    const [loanTypes, setLoanTypes] = useState([]);
+    const [paymentOptions, setPaymentOptions] = useState([]);
+    const [accounts, setAccounts] = useState([]);
+    const dispatch = useDispatch();
+    const { login } = authActions;
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetchLoanTypes();
+        fetchUserAccounts();
+    }, []);
 
 
-   return (
-    <>
-    <div className="componentcontainer">
-        <h3>Add a new loan</h3>
-        <form action="" method="post" className="Form">
-          <fieldset className="Formfield">
-            <label>Reason for Loan: <input type="text" id="1" /></label>
-            <label>Account of origin: <input type="text" id="2" /></label>
-            <label>Amount: $<input type="number" id="3" /></label>
-            <label>Payments: <select className="selectCard" name="ej" id="ej">
-              <option value="pay1">3</option>
-              <option value="pay2">6</option>
-              <option value="pay3">12</option>
-              <option value="pay4">24</option>
-            </select></label>
-            <Anchor href="/loans" content="Submit"></Anchor>
-          </fieldset>
-        </form>
-    </div>
-</>
-   )
+    const fetchUserAccounts = async () => {
+      const token = localStorage.getItem('token');
+      try {
+          const response = await axios.get("/api/clients/current/accounts", {
+              headers: {
+                  Authorization: `Bearer ${token}`
+              }
+          });
+          setAccounts(response.data);
+      } catch (error) {
+          console.error("Error fetching user accounts:", error);
+      }
+  };
 
-}
+    const fetchLoanTypes = async () => {
+        const token = localStorage.getItem('token');
+        try {
+            const response = await axios.get("/api/loans", {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            setLoanTypes(response.data);
+        } catch (error) {
+            console.error("Error fetching loan types:", error);
+        }
+    };
+
+    const handleLoanApply = async (e) => {
+        const token = localStorage.getItem('token');
+        e.preventDefault();
+        axios.post("/api/loans", userData, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+            .then((res) => {
+                console.log(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+                alert("Loan limit exceeded.")
+            });
+    };
+
+    const handleInput = (e) => {
+        setUserData({ ...userData, [e.target.name]: e.target.value });
+        console.log(userData);
+    };
+
+    const handleLoanTypeChange = (e) => {
+        const selectedType = e.target.value;
+        const selectedLoan = loanTypes.find(loan => loan.name === selectedType);
+        setPaymentOptions(selectedLoan ? selectedLoan.payments : []);
+        setUserData({ ...userData, name: selectedType, payments: '' }); // Set name and reset payments when loan type changes
+    };
+
+    return (
+        <div className="componentcontainer">
+            <form onSubmit={handleLoanApply}>
+                <label htmlFor="name">Type of loan:</label>
+                <select onChange={handleLoanTypeChange} value={userData.name} name="name" id="name">
+                    <option value="">Select a loan type</option>
+                    {loanTypes.map(loan => (
+                        <option key={loan.name} value={loan.name}>{loan.name}</option>
+                    ))}
+                </select>
+                <label htmlFor="accountNumber">AccountNumber:</label>
+                <select onChange={handleInput} value={userData.accountNumber} name="accountNumber" id="accountNumber">
+                    <option value="">Select an account</option>
+                    {accounts.map(account => (
+                        <option key={account.number} value={account.number}>{account.number}</option>
+                    ))}
+                </select>
+                <label htmlFor="payments">Payments:</label>
+                <select onChange={handleInput} value={userData.payments} name="payments" id="payments">
+                    <option value="">Select a payment option</option>
+                    {paymentOptions.map(option => (
+                        <option key={option} value={option}>{option}</option>
+                    ))}
+                </select>
+                <label htmlFor="amount">Amount:</label>
+                <input onChange={handleInput} type="number" name="amount" id="amount" />
+                <button type="submit">Apply Loan</button>
+            </form>
+        </div>
+    );
+};
 
 export default ReqLoan;

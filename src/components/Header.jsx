@@ -9,24 +9,24 @@ import face from "../assets/face.png";
 import whatspp from "../assets/whatsapp.png";
 
 const Header = () => {
+    const token = localStorage.getItem('token')
     return (
         <header className="header">
             <img className="logo" src={logo} alt="logo"></img>
             <nav>
-                {
-                    navitems.map((link, index) => {
-                        console.log(link)
-                        return (<Anchor key={index} href={link.href} content={link.name} onClick={link.function}></Anchor>)
-                    })   
-                }
-                <LogoutButton></LogoutButton>
+                <Anchor href="/" content="Dashboard"></Anchor>
+                {!token && <Anchor href="/signin" content="Log in"></Anchor>}
+                {!token && <Anchor href="/signup" content="Sign up"></Anchor>}
+                {token && <Anchor href="/accounts" content="Acounts"></Anchor>}
+                {token && <LogoutButton></LogoutButton>}
+                
             </nav>
             <p>&#169; 2024 - Matías Miguel Dure All rights reserved</p>
             <div className="socialmediacontainer">
-                <img src={insta}></img>
-                <img src={linked}></img>
-                <img src={whatspp}></img>
-                <img src={face}></img>
+                <a href="https://www.facebook.com/matias.dure.568"><img src={insta}></img></a>
+                <a href="https://www.linkedin.com/in/mat%C3%ADas-dur%C3%A9-b5b581236/"><img  src={linked}></img></a>
+                <a href="https://www.instagram.com/matias.dure18/"><img src={face}></img></a>
+                
             </div>
         </header>
     )

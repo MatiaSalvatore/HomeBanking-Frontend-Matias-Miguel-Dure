@@ -1,17 +1,18 @@
 export const navitems = [
-
+    {
+        href:"/",
+        name:"Dashboard",
+    },
     {
         href:"/accounts",
-        name:"Accounts",
+        name:"Accounts"
     },
     {
-        href:"/cards",
-        name:"Cards",
+        href:"/signin",
+        name:"Sign in",
     },
     {
-        href:"/loans",
-        name:"Loans",
-
+        href:"/signup",
+        name:"SignUp",
     }
-
 ]

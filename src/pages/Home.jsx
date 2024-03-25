@@ -6,9 +6,9 @@ import ClientCard from "../components/ClientCard";
 import ClientDBCards from "../components/ClientDBCards";
 import AccountDetail from "../components/AccountDetail";
 import Transaction from "../components/Transaction";
-import SimpleSlider from "../components/ReactSlick";
-import Slider from "react-slick";
 import WelcomeBanner from "../components/ClientBanner";
+import ActionButton from "../components/ActionButton";
+import Carrousel from "../components/Carrousel";
 
 
 
@@ -37,12 +37,22 @@ const Home = ()=>{
     const username = user.name || 'Guest'
     return (
     <div>
-        <WelcomeBanner></WelcomeBanner>
-        <h1>Accounts</h1>
-        <ClientCard></ClientCard>
-        <h1>Cards</h1>
-        <ClientDBCards></ClientDBCards>
-        <h1>Actions</h1>
+        <div className="mainlayoutgrid">
+            <div>
+                <WelcomeBanner></WelcomeBanner>
+                <h1 className="titles" >Accounts</h1>
+                <ClientCard></ClientCard>
+                <h1 className="titles">Cards</h1>
+                <ClientDBCards></ClientDBCards>
+                <h1 className="titles">Actions</h1>
+                <div className="actioncontainer">
+                    <ActionButton href="/transaction" content="Transfer money" img="src\assets\icons\bx-transfer.svg"></ActionButton>
+                    <ActionButton href="/addloan" content="Apply Loan" img="src\assets\icons\bx-edit-alt.svg"></ActionButton>
+                    <ActionButton href="/addcard" content="Request credit card" img="src\assets\icons\bx-credit-card-alt.svg"></ActionButton>
+                    <ActionButton href="/addacc" content="Request new account" img="src\assets\icons\bxs-user-account.svg"></ActionButton>
+                </div>
+            </div>
+        </div>
     </div>
     
     )

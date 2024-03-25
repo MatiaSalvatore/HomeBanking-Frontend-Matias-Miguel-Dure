@@ -21,6 +21,7 @@ const SignUp = ()=>{
         })
         .catch((err)=>{
             console.log(err);
+            alert('User with specified email address already exists');
         })
     }
 

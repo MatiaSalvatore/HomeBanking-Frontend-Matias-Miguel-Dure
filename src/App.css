@@ -92,7 +92,7 @@ html, body{
 .acctitle{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight:bold;
-  font-size: larger;
+  font-size: medium;
 }
 
 .accbalance{
@@ -116,11 +116,24 @@ html, body{
   height: 220px;
   width: 400px;
   display: flex;
-  flex: row;
+  flex-direction: row;
   gap:50px;
   place-content: center;
   
 }
+.rcs-inner-handle {
+  background-color: #140901;
+
+}
+/*
+   _____              _     
+  / ____|            | |    
+ | |     __ _ _ __ __| |___ 
+ | |    / _` | '__/ _` / __|
+ | |___| (_| | | | (_| \__ \
+  \_____\__,_|_|  \__,_|___/
+                            
+*/
 
 .clientcard{
   margin-top: 10px;
@@ -149,7 +162,6 @@ html, body{
 .cdcardscontainer{
   height:220px;
   width: 400px;
-  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -243,8 +255,166 @@ html, body{
 }
 
 .welcome{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: xx-large;
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  margin-top: 20px;
+  margin-bottom: 50px;
 }
+
+.actionbutton{
+  background: rgb(198,148,82);
+  background: linear-gradient(90deg, rgba(198,148,82,1) 0%, rgba(138,73,0,1) 83%);
+
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  place-content: center;
+  text-align: center;
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+  border-radius: 10px;
+  font-family: 'roboto';
+}
+
+.actionbutton img{
+  width: 50px;
+  place-self: center;
+  fill: white;
+}
+
+.actioncontainer{
+ width: 500px;
+ gap:10px;
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.mainlayoutgrid{
+  display: flex;
+  flex-direction: row;
+  gap: 350px;
+  margin-top: 50px;
+}
+
+.carousel .slide{
+  width:200px;
+  height:700px;
+}
+
+.titles{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.leftpanel{
+  width: 500px;
+}
+
+
+/*Account details*/
+
+
+
+.accountdetails{
+  height: 35vh;
+  width: 700px;
+}
+
+.accountinfo{
+  height:  35vh;
+  width: 100%;
+  overflow: hidden;
+  text-align: start;
+}
+
+.accountinfo tr{
+  width: 40%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* FONTS */
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
