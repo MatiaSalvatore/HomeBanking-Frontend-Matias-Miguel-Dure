@@ -45,11 +45,11 @@ const SignIn = ()=>{
 
     return (
         <div className="componentcontainer">
-            <form onSubmit={handleSignIn}>
+            <form className="logincontainer" onSubmit={handleSignIn}>
                 <label htmlFor="email">Email:</label><input onChange={handleInput} type="email" name="email" id=""></input>
                 
                 <label htmlFor="password">Password:</label><input onChange={handleInput} type="password" name="password" id="password"></input>
-                <button type="submit">Log in</button>
+                <button className="submitbutton" type="submit">Log in</button>
             </form>
         </div>
     )

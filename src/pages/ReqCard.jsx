@@ -54,7 +54,7 @@ const ReqCard = () => {
               <option value="GOLD">GOLD</option>
               <option value="SILVER">SILVER</option>
             </select>
-            <button className="anchor" href="/" type="submit">Apply new card</button>
+            <button  className="submitbutton" href="/" type="submit">Apply new card</button>
           </form>
       </div>
   </>

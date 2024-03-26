@@ -41,7 +41,7 @@ const SignUp = ()=>{
                 <input onChange={handleInput} type="email" name="email" id="email" />
                 <label htmlFor="password">Password:</label>
                 <input onChange={handleInput} type="password" name="password" id="password" />
-                <button type="submit">Sign Up</button>
+                <button className="submitbutton" type="submit">Sign Up</button>
             </form>
         </div>
     )

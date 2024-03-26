@@ -51,6 +51,7 @@ const AccountDetail = () => {
                         <hr></hr>
         
                         <h3>Transactions</h3>
+                        <div class="containerofinfo">
                         <table className="accountinfo">
                             <thead>
                                 <tr>
@@ -69,8 +70,10 @@ const AccountDetail = () => {
                                 ))}
                             </tbody>
                         </table>
+                        </div>
                         <hr></hr>
                         <h3>Loans</h3>
+                        <div class="containerofinfo">
                         <table className="accountinfo">
                             <thead>
                                 <tr>
@@ -79,7 +82,7 @@ const AccountDetail = () => {
                                     <th className="tg-0lax">Date</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody className="tibodi">
                                 {selectedAccount.transactions.map(transaction => (
                                     <tr key={transaction.id}>
                                         <td>{numberFormatter.format(transaction.amount)}</td>
@@ -89,6 +92,7 @@ const AccountDetail = () => {
                                 ))}
                             </tbody>
                         </table>
+                        </div>
                     </>
                 )}
             </div>

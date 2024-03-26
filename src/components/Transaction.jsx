@@ -46,7 +46,7 @@ const Transaction = ()=>{
                 <input onChange={handleInput} type="text" name="detail" id="detail" />
                 <label htmlFor="amount">Amount:</label>
                 <input onChange={handleInput} type="number" name="amount" id="amount" />
-                <button type="submit">Transfer</button>
+                <button className="submitbutton" type="submit">Transfer</button>
             </form>
         </div>
     )

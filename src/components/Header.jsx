@@ -23,10 +23,9 @@ const Header = () => {
             </nav>
             <p>&#169; 2024 - Matías Miguel Dure All rights reserved</p>
             <div className="socialmediacontainer">
-                <a href="https://www.facebook.com/matias.dure.568"><img src={insta}></img></a>
+                <a href="https://www.facebook.com/matias.dure.568"><img src={face}></img></a>
                 <a href="https://www.linkedin.com/in/mat%C3%ADas-dur%C3%A9-b5b581236/"><img  src={linked}></img></a>
-                <a href="https://www.instagram.com/matias.dure18/"><img src={face}></img></a>
-                
+                <a href="https://www.instagram.com/matias.dure18/"><img src={insta}></img></a>
             </div>
         </header>
     )

@@ -33,11 +33,10 @@ const ReqAccount = () => {
 
   return (
       <div className="componentcontainer">
-          <h3>Add a new account</h3>
           <form onSubmit={handleNewAccount} className="Form" >
-              <fieldset className="Formfield">
+              <fieldset className="termsandconditions">
                   <p>By creating an account with Lion Bank, you confirm your eligibility, agree to provide accurate information, and undertake to maintain the security of your account credentials. You commit to complying with all applicable laws and regulations, refrain from engaging in illegal activities, and consent to receive communications from Lion Bank. Lion Bank reserves the right to terminate or suspend accounts for any violation of these terms, and may update them at its discretion. These terms are governed by the laws of [Jurisdiction], and any invalid provision shall not affect the validity of the remaining terms.</p>
-                  <button className="anchor" type="submit">New Account</button>
+                  <button className="submitbutton" type="submit">New Account</button>
               </fieldset>
           </form>
       </div>

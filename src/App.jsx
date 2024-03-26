@@ -66,7 +66,6 @@ function App() {
           <Route path='/addacc' element={<ReqAccountWithAuth/>} />
           <Route path='/addcard' element={<ReqCardWithAuth/>} />
           <Route path='/transaction' element={<ReqTransactionWithAuth/>} />
-
         </Routes>
       </MainLayout>
   );

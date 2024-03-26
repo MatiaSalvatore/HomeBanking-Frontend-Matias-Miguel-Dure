@@ -57,6 +57,7 @@ const ReqLoan = () => {
         })
             .then((res) => {
                 console.log(res.data);
+                alert("Loan added to your account!")
             })
             .catch((err) => {
                 console.log(err);
@@ -102,7 +103,7 @@ const ReqLoan = () => {
                 </select>
                 <label htmlFor="amount">Amount:</label>
                 <input onChange={handleInput} type="number" name="amount" id="amount" />
-                <button type="submit">Apply Loan</button>
+                <button className="submitbutton" type="submit">Apply Loan</button>
             </form>
         </div>
     );

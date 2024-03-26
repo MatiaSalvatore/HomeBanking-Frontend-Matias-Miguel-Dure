@@ -65,13 +65,12 @@ html, body{
   display: flex;
   flex-direction: column;
   gap:10px;
+  top: 300px;
 
 }
 
 .logo {
   width: 400px;
-
-  place-self: center;
 
 }
 
@@ -80,14 +79,14 @@ html, body{
   padding: 5px;
   width:100px;
   text-align: center;
-  background-color: #140901;
+  background-color: #1e1e1d;
   color:white;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 
 }
 .anchor:hover{
-  background-color: #977e6b;
+  background-color: white;
   color:#140901;
 }
 
@@ -111,6 +110,7 @@ html, body{
 
 .componentcontainer{
   margin-top: 50px;
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -121,11 +121,13 @@ html, body{
 
 .formcontainer{
   margin-top: 50px;
+  margin-left: 100px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   place-items: center;
   gap:50px;
-  background-color: rgb(7, 7, 7);
+  background-color: #1e1e1d;
   padding: 50px;
   border-radius: 20px;
   color: white;
@@ -147,6 +149,22 @@ html, body{
   background-color: #140901;
 
 }
+
+.termsandconditions{
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 500px;
+  font-family: 'roboto';
+  font-size: 20px;
+  background-color: #1e1e1d;
+  border-radius: 10px;
+  color: white;
+  justify-content: space-around;
+  padding: 50px;
+  text-align: justify;
+}
+
 /*
    _____              _     
   / ____|            | |    
@@ -349,16 +367,23 @@ html, body{
 
 .leftpanel{
   width: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
 
 /*Account details*/
 
 
-
 .accountdetails{
-  height: 35vh;
+  background-color: #1e1e1d;
+  color: white;
   width: 700px;
+  height: 80vh;
+  padding:50px;
+  border-radius:10px;
+  margin-top: 50px;
+  overflow: scroll;
 }
 
 .accountinfo{
@@ -517,6 +542,62 @@ input:autofill{
   background-color: aqua;
 }
 
+option{
+  background-color: #1e1e1d;
+}
+
 .box{
   margin-left: 350px;
+}
+
+
+.submitbutton{
+  width: 150px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: #353333;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  align-self: center;
+}
+
+.submitbutton:hover{
+  width: 150px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  color: #000000;
+  font-size: 20px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  align-self: center;
+}
+
+
+.logincontainer{
+  font-family: 'roboto';
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1d;
+  gap:10px;
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  align-items: left;
+  justify-content: center;
 }
